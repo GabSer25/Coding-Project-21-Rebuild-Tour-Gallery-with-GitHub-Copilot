@@ -52,8 +52,10 @@ const App = () => {
       <h1>Tour Gallery</h1>
 
       {/* Conditional UI Rendering */}
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error}</p>}
+      {loading && <p>Loading...</p>} // Loading Message
+     
+      {error && <p>Error: {error}</p>} // Error Message
+     
       {!loading && !error && tours.length === 0 && (
         <div>
           <h2>No Tours Left</h2>
@@ -61,7 +63,9 @@ const App = () => {
         </div>
       )}
       {!loading && !error && tours.length > 0 && (
-        <Gallery tours={tours} onRemove={removeTour} />
+      
+      <Gallery tours={tours} onRemove={removeTour} /> // Show Gallery if Data Loaded
+      
       )}
     </main>
   );
