@@ -55,8 +55,11 @@ const App = () => {
       {loading && <p>Loading...</p>} // Loading Message
      
       {error && <p>Error: {error}</p>} // Error Message
-     
+      
+  // If no tours are left, show a "Refresh" button to refetch the data
+
       {!loading && !error && tours.length === 0 && (
+       
         <div>
           <h2>No Tours Left</h2>
           <button onClick={fetchTours}>Refresh</button>
