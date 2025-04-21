@@ -52,12 +52,10 @@ const App = () => {
       <h1>Tour Gallery</h1>
 
       {/* Conditional UI Rendering */}
-      {loading && <p>Loading...</p>} // Loading Message
+      {loading && <p>Loading...</p>}
      
-      {error && <p>Error: {error}</p>} // Error Message
+      {error && <p>Error: {error}</p>}
       
-  // If no tours are left, show a "Refresh" button to refetch the data
-
       {!loading && !error && tours.length === 0 && (
        
         <div>
